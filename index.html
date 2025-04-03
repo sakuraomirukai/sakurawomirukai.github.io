@@ -223,11 +223,22 @@
             margin: 40px 20px;
         }
 
-        /* スマホ対応 */
         @media (max-width: 768px) {
-            .logo {
-        height: 30px; /* スマホ時のロゴの高さ */
+    .tab-menu {
+        display: none; /* 初期状態では隠す */
+        flex-direction: column;
+        background: rgba(51, 51, 51, 0.9);
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
     }
+
+    .menu-toggle {
+        display: block;
+    }
+}
 
     .tab-menu {
         flex-direction: row;
@@ -380,6 +391,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // 初期表示
     updateSlidePosition();
 });
+
+    function toggleMenu() {
+    const menu = document.querySelector(".tab-menu");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+    }
+}
 </script>
 
 </body>
