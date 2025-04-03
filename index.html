@@ -336,7 +336,7 @@
             <p><strong>2025.3.24</strong> カラオケ</p>
         </div>
 
-        <a href="#" class="button" onclick="event.preventDefault(); alert('ボタンを押してくれてありがとう！ちなみに桜を見る会の紋は短冊に桜って名前らしい')">クリック！</a>
+        <a href="#" class="button" onclick="event.preventDefault(); alert('ボタンを押してくれてありがとう！ちなみに左上の紋は短冊に桜って名前らしい')">クリック！</a>
         <a href="subpage.html" class="button">サブページへ</a>
 </div>
 
@@ -349,11 +349,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const totalSlides = slides.length;
 
     // .slides の幅を正しく設定
-   slidesContainer.style.width = ${totalSlides * 100}%;  // 修正後
+   slidesContainer.style.width = `${totalSlides * 100}%`;  // 修正後
   // 修正後
 
     function updateSlidePosition() {
-    slidesContainer.style.transform = translateX(${-slideIndex * 100}%);
+    slidesContainer.style.transform = `translateX(${-slideIndex * 100}%)`;
         dots.forEach((dot, index) => {
             dot.classList.toggle("active", index === slideIndex);
         });
